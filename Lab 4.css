@@ -1,0 +1,71 @@
+body {
+
+    background: lightgreen;
+    
+}
+
+/* Big pops container type (main one)  */
+.father-container{
+
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+/* First container --> Alert me! */
+
+.alert-me-container-1{
+
+    border-radius: 15px;
+    border: 2px solid white;
+    height: 5vh;
+    width: 40%!important;
+    padding: 20px;
+    color: goldenrod;
+    background-color: purple;
+    text-align: center;
+
+}
+
+
+.add-text-container{
+
+    border-radius: 15px;
+    border: 2px solid white;
+    height: 5vh;
+    width: 40%;
+    padding: 20px;
+    color: goldenrod;
+    background-color: purple;
+    text-align: center;
+
+}
+
+.change-color-container{
+
+    border-radius: 15px;
+    border: 2px solid white;
+    height: 5vh;
+    width: 40%;
+    padding: 20px;
+    color: purple;
+    background-color: purple;
+    text-align: center;
+
+}
+
+.validate-text-container{
+
+    border-radius: 15px;
+    border: 2px solid white;
+    height: 5vh;
+    width: 40%;
+    padding: 20px;
+    color: goldenrod;
+    background-color: purple;
+    text-align: center;
+    
+
+}
