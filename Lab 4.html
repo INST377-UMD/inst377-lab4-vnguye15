@@ -1,0 +1,143 @@
+<html>
+
+<header>
+
+    <title>INST377 - Lab 4 </title>
+
+</header>
+
+<body>
+
+    <head>
+
+        <h1 id = "page-header"> <b>INST377 Lab 4</b> </h1>
+        <link rel="stylesheet" href="Lab 4.css">
+
+    </head>
+
+    <!-- Main container that will compose of 4 sub-containerss -->
+    <div class="father-container">
+
+        <!-- Form wrapped around Alert me container -->
+        <div class="alert-me-container-1">
+            <form name="nameForm">
+                <label name="name" required>Name: </label>
+                <input type="text" id="full-name">
+                <input type="button" value="Alert me!" onclick="return alertName()">
+                <!-- onclick should be on button not form Tag  -->
+
+            </form>
+        </div>
+
+        <!-- NEED TO IMPLEMENT CHANGECOLOR() FUNCTION  -->
+        <div class="change-color-container">
+            <!-- <form name="nameForm" onclick="return changeColor()"> -->
+            <button onclick="changeColor()">Change Color</button>
+            <!-- button onsubmit works -->
+            <!-- </form> -->
+        </div>
+
+        <!-- NEED TO IMPLEMENT validateText() FUNCTION -->
+        <div class="validate-text-container">
+            <!-- Submitting form so use on SUBMIT -->
+            <form name="validate-text-form" onsubmit="return validateText()"> 
+                <!-- label tag shouldn't have ID selector (shows input boxes what they are) -->
+                 <!-- Ask yourself: is this a data field or label field?? -->
+                <label name="validate-text" required>Text Tester:</label>
+                <!-- id selectors should be unique (no duplicates at all) -->
+                <input type="text" id="name"> 
+                <input type="submit" value="Validate Text">
+            </form>
+        </div>
+
+        <!-- NEED TO IMPLEMENT addText() FUNCTION  -->
+        <div class="add-text-container">
+            <form name="nameForm" onsubmit="return alertName()">
+                <button onclick="addText()">Add Text</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- alertName() Function -->
+    <script type="text/javascript">
+        function alertName() {
+            const name = document.getElementById('full-name').value;  // gets the value of the full-name input
+            if (name == "") {
+
+                alert("No name identified");
+                return false; //stops it from form submitting twice by accident (TA)
+
+            }
+
+            alert("Hello " + name);
+
+        }
+
+
+        // changeColor() function here
+        function changeColor() {
+
+
+            //grabs the color value of the change-color-container class
+            if (document.body.style.backgroundColor == "lightgreen") {
+
+                // if color is already cornsilk
+                document.body.style.backgroundColor = "goldenrod";
+
+
+            } else {
+
+                document.body.style.backgroundColor = "lightgreen";
+            }
+            return false;
+
+
+        }
+
+        //validateText() New Edit
+        function validateText() {
+            var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            if (validation.test(document.getElementById('name').value)) {
+                alert('How about...nah');
+                return false;
+            }
+            return true;
+        }
+
+
+        //validateText() function here
+        // function validateText() {
+        //     const validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+        //     console.log(document.validate-text-form.name.value);
+        //     if (validation.test(document.getElementById('name').value)) {
+        //         alert('How about...nah');
+        //         return false;
+
+        //         //When submitting form, returning false value negates HTTP request 
+        //         //Returning false is safest thing (dont ever use return True)
+        //         //Defaults to the empty value 
+                
+        //     } 
+        //     return true;
+            
+        // }
+
+        
+
+        // addText() function here 
+        function addText() {
+            
+        }
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
