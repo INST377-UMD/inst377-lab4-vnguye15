@@ -10,7 +10,7 @@
 
     <head>
 
-        <h1 id = "page-header"> <b>INST377 Lab 4</b> </h1>
+        <h1 id = "page-header"><b>INST377 - Lab 4</b></h1>
         <link rel="stylesheet" href="Lab 4.css">
 
     </head>
@@ -50,10 +50,10 @@
             </form>
         </div>
 
-        <!-- NEED TO IMPLEMENT addText() FUNCTION  -->
+       
         <div class="add-text-container">
-            <form name="nameForm" onsubmit="return alertName()">
-                <button onclick="addText()">Add Text</button>
+            <form name="nameForm">
+                <button onclick="return addText()">Add Text</button>
             </form>
         </div>
 
@@ -95,9 +95,9 @@
 
         }
 
-        //validateText() New Edit
+        //Updated validateText() function here
         function validateText() {
-            var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            const validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
             if (validation.test(document.getElementById('name').value)) {
                 alert('How about...nah');
                 return false;
@@ -106,7 +106,7 @@
         }
 
 
-        //validateText() function here
+        //Original validateText() function here
         // function validateText() {
         //     const validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
 
@@ -127,8 +127,19 @@
         
 
         // addText() function here 
+        
+        
+        
         function addText() {
             
+           //innerHTML --> part of DOM (document object model), manipulates website and display 
+           // telling code to get the element by this ID, inner html there change it to INST 377 - Lab 4 - Adding Text
+           // telling it to make that change essentially 
+            //dont need an if statement to check value 
+
+                document.getElementById('page-header').innerHTML = 'INST377 - Lab 4 - Adding Text';
+                return false;
+
         }
 
 
